@@ -1,3 +1,4 @@
 # KotlinBasics
 
-Learn and play with Kotlin
+Play with Kotlin
+

@@ -1,0 +1,68 @@
+var fish = 2
+fish.times(3)
+fish.div(2)
+fish.plus(300)
+fish.minus(200)
+-198
+
+var fish = 2
+fish.times(3)
+6
+
+fish.plus(3)
+5
+
+fish.div(3)
+0
+
+val address : String = null
+error: null can not be a value of a non-null type String
+val address : String = null
+                       ^
+
+val amount : Double ?= 10.0
+
+Dounble
+error: unresolved reference: Dounble
+Dounble
+^
+
+Double
+kotlin.jvm.internal.DoubleCompanionObject@20d3d698
+
+amount
+10.0
+
+amount = 11.0
+error: val cannot be reassigned
+amount = 11.0
+^
+
+val list ? List? = listOf(null,null)
+incomplete code
+
+val list : List? = listOf(null,null)
+error: one type argument expected for interface List<out E>
+val list : List? = listOf(null,null)
+           ^
+
+val list : List<Int,Int>? = listOf(null,null)
+error: one type argument expected for interface List<out E>
+val list : List<Int,Int>? = listOf(null,null)
+               ^
+
+val list : List<Int>? = listOf(null,null)
+error: type inference failed. Expected type mismatch: inferred type is List<Nothing?> but List<Int>? was expected
+val list : List<Int>? = listOf(null,null)
+                        ^
+
+val list : List<Int?> = listOf(null,null)
+
+list?.size()
+error: expression 'size' of type 'Int' cannot be invoked as a function. The function 'invoke()' is not found
+list?.size()
+      ^
+
+val list : List? = listOf(null,null)
+error: one type argument expected for interface List<out E>
+

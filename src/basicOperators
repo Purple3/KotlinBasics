@@ -93,3 +93,129 @@ val blackColor = "black"
 blackColor = "blue"
 error: val cannot be reassigned
 blackColor = "blue"
+
+
+Create a list with two elements that are null; do it in two different ways.
+Next, create a list where the list is null.
+
+var listOfNulls : List<String?> = listOf(null, null)
+
+var listOfNulls : List<String>? = listOf()
+
+var listOfNulls : List<String?> = listOf(null, null)
+
+var listOfNulls_1 : List<String>? = listOf()
+
+listOfNulls
+[null, null]
+
+listOf(null, null)
+[null, null]
+
+listOfNulls_1
+[]
+
+var listOfNulls : List<String?> = listOf()
+
+listOfNulls
+[]
+
+var listOfNulls_2 : List<String?>? = null
+
+Create a nullable integer variable called nullTest, and set it to null. Use a null-check that increases the value by one if it's not null, otherwise returns 0, and prints the result.
+Hint: Use the Elvis operator.
+
+var nullTest : Int? = null
+
+var result = nullTest?.plus(1) ?: 0
+
+result
+0
+
+println(nullTest?.inc() ?: 0)
+0
+
+Strings Quiz:
+What will the code below prints?
+var str : String = "Welcome to Kotlin Class"
+when(str.length){
+    0 -> println("short")
+    in 1..50 -> println("perfect")
+    else -> println ("hello ")
+}
+perfect
+
+*** We cannot declare multiple variables of same type at once in Kotlin ***
+
+Create three String variables for trout, haddock, and snapper.
+Use a String template to print whether you do or don't like to eat these kinds of fish.
+
+var fish1 : String = "trout"
+var fish2 : String = "haddok"
+var fish3 : String = "snapper"
+"I like to eat $fish1 and $fish2 but i donot like $fish3"
+I like to eat trout and haddok but i donot like snapper
+
+when statements in Kotlin are like case or switch statements in other languages.
+Create a when statement with three comparisons:
+If the length of the fishName is 0, print an error message.
+If the length is in the range of 3...12, print "Good fish name".
+If it's anything else, print "OK fish name".
+
+var fishName : String = "Morray Eel"
+when(fishName.length) {
+    0 -> println("Error in fishname")
+    in 3..12 -> println("Good Fish name")
+    else -> println("Ok fishname")
+}
+
+
+val array = Array(7) {1000.0.pow(it)}
+val sizes = arrayOf("byte", "kilobyte", "megabyte", "gigabyte",
+            "terabyte", "petabyte", "exabyte")
+for ((i, value) in array.withIndex()) {
+   println("1 ${sizes[i]} = ${value.toLong()} bytes")
+}
+Output:
+
+1 byte = 1 bytes
+1 kilobyte = 1000 bytes
+1 megabyte = 1000000 bytes
+1 gigabyte = 1000000000 bytes
+1 terabyte = 1000000000000 bytes
+1 petabyte = 1000000000000000 bytes
+1 exabyte = 1000000000000000000 bytes
+
+
+val numbers = intArrayOf(11,12,13,14,15)
+var mutableListOfStrings : MutableList<String> = mutableListOf()
+for ( element in numbers) {
+    mutableListOfStrings.add(element.toString())
+}
+
+mutableListOfStrings
+[11, 12, 13, 14, 15]
+
+numbers
+[I@4005586b
+
+
+Create an integer array of numbers called numbers, from 11 to 15.
+Create an empty mutable list for Strings.
+Write a for loop that loops over the array and adds the string representation of each number to the list.
+Challenge example
+How can you use a for loop to create (a list of) the numbers between 1 and 100 that are divisible by 7?
+
+var listDivBy7 : MutableList<Int> = mutableListOf()
+var index : Int = 0
+for ((index, number) in (1..100).withIndex()) {
+    index.inc()
+    if(number % 7 == 0) {
+        listDivBy7.add(number)
+    }
+}
+println(listDivBy7)
+[7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91, 98]
+
+for (element in 0..100 step 7) println(element.toString() + "- ")
+0- 7- 14- 21- 28- 35- 42- 49- 56- 63- 70- 77- 84- 91- 98-

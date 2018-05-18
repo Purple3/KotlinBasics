@@ -219,3 +219,13 @@ println(listDivBy7)
 
 for (element in 0..100 step 7) println(element.toString() + "- ")
 0- 7- 14- 21- 28- 35- 42- 49- 56- 63- 70- 77- 84- 91- 98-
+
+Mutable vs Immutable Collections
+
+val list : MutableList<String> = mutableListOf()
+list.add(0,"hello")
+list[0]
+hello
+
+var list : List<String> = listOf()
+list.(no method to add/remove)

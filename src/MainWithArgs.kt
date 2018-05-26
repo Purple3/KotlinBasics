@@ -12,7 +12,7 @@ Try to use Kotlin's string templates to do this in 1 line.
 fun main(args: Array<String>) {
     val time : Int = args[0].toInt()
     val salutation : String = if(time < 12) "morning" else "night"
-    println("Good ${salutation}, Kotlin")
+    println("Good $salutation, Kotlin")
 
     /**
      *  1) if (args[0].toInt() < 12) println("Good Morning Kotlin")

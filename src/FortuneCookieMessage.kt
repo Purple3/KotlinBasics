@@ -44,12 +44,29 @@ Hint: There are several ways in which to make this when statement. How much can 
 */
 
 fun main(args: Array<String>) {
-    var fortune: String
-    for (i in 1..10) {
+    var fortune: String = ""
+
+    //for() loop
+    /* for (i in 1..10) {
         fortune = getFortune(getBirthday())
         println("\nYour fortune is: $fortune")
-        if (fortune.contains("Take it easy")) break;
+        if (fortune.contains("Take it easy")) break
+    } */
+
+    //repeat() method instead of for() loop
+    /*repeat(10){
+        fortune = getFortune(getBirthday())
+        println("\nYour fortune is: $fortune")
+        //break is used in loops but not with repeat. Hence using return
+       if (fortune.contains("Take it easy")) return
+    } */
+
+    //while() loop
+    while(!fortune.contains("Take it easy")){
+        fortune = getFortune(getBirthday())
+        println("\nYour fortune is: $fortune")
     }
+
 }
 
 fun getFortune(bdy : Int) : String {

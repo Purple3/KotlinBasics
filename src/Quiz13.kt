@@ -1,4 +1,4 @@
-/*
+/* Quiz 13 & 15
 Create a program that suggests an activity based on various parameters.
 Start in a new file with a main function.
 From main(), create a function, whatShouldIDoToday().
@@ -16,12 +16,26 @@ Note: Keep your work as you will do more with this code in the next practice.
 */
 
 fun main(args : Array<String>) {
-    println(whatShouldIDo("sad"))
+    println(whatShouldIDo("happy"))
+    println("how is your mood today?")
+    var readMood : String = readLine()!!
+    println(whatShouldIDo(readMood))
 }
 
+fun isVeryHot( temperature: Int) = temperature >= 35 || temperature == 0
+fun whatIstheMood(mood: String) = mood == "happy"
+fun howIsTheWheather(weather: String) = weather == "sunny"
+
+//fun isVeryHot (temperature: Int) = temperature > 35
+//fun isSadRainyCold (mood: String, weather: String, temperature: Int) =
+//        mood == "sad" && weather == "rainy" && temperature == 0
+//fun isHappySunny (mood: String, weather: String) = mood == "happy" && weather == "sunny"
+
+
 fun whatShouldIDo(mood : String, weather: String = "sunny", temperature : Int = 24) : String {
-    return when {
-        mood == "happy" && weather == "sunny" -> return "go for a walk"
-        else -> "stay home and read"
+    return when { // when can be used without parameters
+        whatIstheMood(mood) && howIsTheWheather(weather) && isVeryHot(0) -> return "Stay in bed"
+        isVeryHot(35)-> "go swimming"
+        else -> "Do nothing"
     }
 }
